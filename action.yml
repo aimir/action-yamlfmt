@@ -1,4 +1,4 @@
-name: 'yamlfmt'
+name: 'action-yamlfmt'
 description: 'Format YAML files using yamlfmt'
 
 branding:
