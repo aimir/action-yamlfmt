@@ -1,15 +1,15 @@
-# yamlfmt-action
+# action-yamlfmt
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/yk-lab/yamlfmt-action?style=for-the-badge)](https://github.com/yk-lab/yamlfmt-action/releases)
-[![GitHub license](https://img.shields.io/github/license/yk-lab/yamlfmt-action?style=for-the-badge)](https://github.com/yk-lab/yamlfmt-action?tab=MIT-1-ov-file#readme)
-[![GitHub stars](https://img.shields.io/github/stars/yk-lab/yamlfmt-action?style=for-the-badge)](https://github.com/yk-lab/yamlfmt-action/stargazers)
-[![GitHub watchers](https://img.shields.io/github/watchers/yk-lab/yamlfmt-action?style=for-the-badge)](https://github.com/yk-lab/yamlfmt-action/watchers)
-[![DeepWiki](https://img.shields.io/badge/DeepWiki-yk--lab%2Fyamlfmt--action-blue.svg?style=for-the-badge)](https://deepwiki.com/yk-lab/yamlfmt-action)
-![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/yk-lab/yamlfmt-action?style=for-the-badge)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/aimir/yamlfmt-action?style=for-the-badge)](https://github.com/aimir/yamlfmt-action/releases)
+[![GitHub license](https://img.shields.io/github/license/aimir/yamlfmt-action?style=for-the-badge)](https://github.com/aimir/yamlfmt-action?tab=MIT-1-ov-file#readme)
+[![GitHub stars](https://img.shields.io/github/stars/aimir/yamlfmt-action?style=for-the-badge)](https://github.com/aimir/yamlfmt-action/stargazers)
+[![GitHub watchers](https://img.shields.io/github/watchers/aimir/yamlfmt-action?style=for-the-badge)](https://github.com/aimir/yamlfmt-action/watchers)
 
 English | [日本語](README.ja.md)
 
 Automatically format YAML files using `yamlfmt` in your GitHub Actions workflows. This action helps maintain consistent code style, making reviews and debugging easier.
+
+> **About this fork:** maintained fork of [`yk-lab/yamlfmt-action`](https://github.com/yk-lab/yamlfmt-action). Internal sub-actions (`actions/setup-go`, `actions/cache`) are kept on Node 24 releases so consumers don't trip the GitHub Actions Node.js 20 deprecation. Same input contract as the upstream `@v1.0.0` release.
 
 ## TL;DR
 
@@ -35,7 +35,7 @@ jobs:
           github_token: ${{ secrets.github_token }}
           fail_on_error: true
       - name: yamlfmt
-        uses: yk-lab/yamlfmt-action@v1
+        uses: aimir/yamlfmt-action@v1.0.0
 ```
 
 ## Features
@@ -56,7 +56,7 @@ jobs:
 
 ## Usage
 
-Add `yk-lab/yamlfmt-action` as a step in your workflow:
+Add `aimir/yamlfmt-action` as a step in your workflow:
 
 ```yaml
 name: YAML Formatting
@@ -73,7 +73,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run yamlfmt
-        uses: yk-lab/yamlfmt-action@v1
+        uses: aimir/yamlfmt-action@v1.0.0
 ```
 
 ## Options
@@ -93,7 +93,7 @@ The action supports the following input parameters:
 
 ```yaml
 - name: Run yamlfmt with options
-  uses: yk-lab/yamlfmt-action@v1
+  uses: aimir/yamlfmt-action@v1.0.0
   with:
     path: '.github/workflows'
 ```

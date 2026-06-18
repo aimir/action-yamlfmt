@@ -1,15 +1,15 @@
-# yamlfmt-action
+# action-yamlfmt
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/yk-lab/yamlfmt-action?style=for-the-badge)](https://github.com/yk-lab/yamlfmt-action/releases)
-[![GitHub license](https://img.shields.io/github/license/yk-lab/yamlfmt-action?style=for-the-badge)](https://github.com/yk-lab/yamlfmt-action?tab=MIT-1-ov-file#readme)
-[![GitHub stars](https://img.shields.io/github/stars/yk-lab/yamlfmt-action?style=for-the-badge)](https://github.com/yk-lab/yamlfmt-action/stargazers)
-[![GitHub watchers](https://img.shields.io/github/watchers/yk-lab/yamlfmt-action?style=for-the-badge)](https://github.com/yk-lab/yamlfmt-action/watchers)
-[![DeepWiki](https://img.shields.io/badge/DeepWiki-yk--lab%2Fyamlfmt--action-blue.svg?style=for-the-badge)](https://deepwiki.com/yk-lab/yamlfmt-action)
-![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/yk-lab/yamlfmt-action?style=for-the-badge)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/aimir/yamlfmt-action?style=for-the-badge)](https://github.com/aimir/yamlfmt-action/releases)
+[![GitHub license](https://img.shields.io/github/license/aimir/yamlfmt-action?style=for-the-badge)](https://github.com/aimir/yamlfmt-action?tab=MIT-1-ov-file#readme)
+[![GitHub stars](https://img.shields.io/github/stars/aimir/yamlfmt-action?style=for-the-badge)](https://github.com/aimir/yamlfmt-action/stargazers)
+[![GitHub watchers](https://img.shields.io/github/watchers/aimir/yamlfmt-action?style=for-the-badge)](https://github.com/aimir/yamlfmt-action/watchers)
 
 [English](README.md) | 日本語
 
 YAML ファイルを自動的に整形するための GitHub Actions 用アクションです。コードの一貫性を保ち、レビューやデバッグを容易にします。
+
+> **このフォークについて:** [`yk-lab/yamlfmt-action`](https://github.com/yk-lab/yamlfmt-action) のメンテナンスフォークです。内部で利用しているサブアクション（`actions/setup-go`、`actions/cache`）を Node 24 リリースに揃え、GitHub Actions の Node.js 20 廃止警告を回避しています。入力仕様は upstream の `@v1.0.0` リリースと同じです。
 
 ## TL;DR
 
@@ -35,7 +35,7 @@ jobs:
           github_token: ${{ secrets.github_token }}
           fail_on_error: true
       - name: yamlfmt
-        uses: yk-lab/yamlfmt-action@v1
+        uses: aimir/yamlfmt-action@v1.0.0
 ```
 
 ## 特徴
@@ -56,7 +56,7 @@ jobs:
 
 ## 使用方法
 
-ワークフローのステップに `yk-lab/yamlfmt-action` を追加します。
+ワークフローのステップに `aimir/yamlfmt-action` を追加します。
 
 ```yaml
 name: YAML Formatting
@@ -73,7 +73,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run yamlfmt
-        uses: yk-lab/yamlfmt-action@v1
+        uses: aimir/yamlfmt-action@v1.0.0
 ```
 
 ## オプション
@@ -93,7 +93,7 @@ jobs:
 
 ```yaml
 - name: Run yamlfmt
-  uses: yk-lab/yamlfmt-action@v1
+  uses: aimir/yamlfmt-action@v1.0.0
   with:
     path: '.github/workflows'
 ```
@@ -110,7 +110,7 @@ A2. 現在のバージョンでは、`yamlfmt` のオプションを使用して
 
 ## 貢献
 
-貢献を歓迎します！バグ報告や機能提案は [Issues](https://github.com/yk-lab/yamlfmt-action/issues) へ、コードの貢献はプルリクエストをお送りください。
+貢献を歓迎します！バグ報告や機能提案は [Issues](https://github.com/aimir/yamlfmt-action/issues) へ、コードの貢献はプルリクエストをお送りください。
 
 **開発手順：**
 
