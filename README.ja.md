@@ -1,9 +1,9 @@
 # action-yamlfmt
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/aimir/yamlfmt-action?style=for-the-badge)](https://github.com/aimir/yamlfmt-action/releases)
-[![GitHub license](https://img.shields.io/github/license/aimir/yamlfmt-action?style=for-the-badge)](https://github.com/aimir/yamlfmt-action?tab=MIT-1-ov-file#readme)
-[![GitHub stars](https://img.shields.io/github/stars/aimir/yamlfmt-action?style=for-the-badge)](https://github.com/aimir/yamlfmt-action/stargazers)
-[![GitHub watchers](https://img.shields.io/github/watchers/aimir/yamlfmt-action?style=for-the-badge)](https://github.com/aimir/yamlfmt-action/watchers)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/aimir/action-yamlfmt?style=for-the-badge)](https://github.com/aimir/action-yamlfmt/releases)
+[![GitHub license](https://img.shields.io/github/license/aimir/action-yamlfmt?style=for-the-badge)](https://github.com/aimir/action-yamlfmt?tab=MIT-1-ov-file#readme)
+[![GitHub stars](https://img.shields.io/github/stars/aimir/action-yamlfmt?style=for-the-badge)](https://github.com/aimir/action-yamlfmt/stargazers)
+[![GitHub watchers](https://img.shields.io/github/watchers/aimir/action-yamlfmt?style=for-the-badge)](https://github.com/aimir/action-yamlfmt/watchers)
 
 [English](README.md) | 日本語
 
@@ -35,7 +35,7 @@ jobs:
           github_token: ${{ secrets.github_token }}
           fail_on_error: true
       - name: yamlfmt
-        uses: aimir/yamlfmt-action@v1.0.0
+        uses: aimir/action-yamlfmt@v1.0.0
 ```
 
 ## 特徴
@@ -56,7 +56,7 @@ jobs:
 
 ## 使用方法
 
-ワークフローのステップに `aimir/yamlfmt-action` を追加します。
+ワークフローのステップに `aimir/action-yamlfmt` を追加します。
 
 ```yaml
 name: YAML Formatting
@@ -73,7 +73,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run yamlfmt
-        uses: aimir/yamlfmt-action@v1.0.0
+        uses: aimir/action-yamlfmt@v1.0.0
 ```
 
 ## オプション
@@ -93,7 +93,7 @@ jobs:
 
 ```yaml
 - name: Run yamlfmt
-  uses: aimir/yamlfmt-action@v1.0.0
+  uses: aimir/action-yamlfmt@v1.0.0
   with:
     path: '.github/workflows'
 ```
@@ -110,7 +110,7 @@ A2. 現在のバージョンでは、`yamlfmt` のオプションを使用して
 
 ## 貢献
 
-貢献を歓迎します！バグ報告や機能提案は [Issues](https://github.com/aimir/yamlfmt-action/issues) へ、コードの貢献はプルリクエストをお送りください。
+貢献を歓迎します！バグ報告や機能提案は [Issues](https://github.com/aimir/action-yamlfmt/issues) へ、コードの貢献はプルリクエストをお送りください。
 
 **開発手順：**
 
