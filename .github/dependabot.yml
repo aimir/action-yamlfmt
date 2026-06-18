@@ -13,6 +13,6 @@ updates:
       timezone: 'Asia/Tokyo'
     target-branch: main
     assignees:
-      - 'yk-lab'
+      - 'aimir'
     reviewers:
-      - 'yk-lab'
+      - 'aimir'

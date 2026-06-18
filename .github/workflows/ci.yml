@@ -19,6 +19,7 @@ jobs:
           github_token: ${{ secrets.github_token }}
           fail_on_error: true
       - name: yamlfmt
-        uses: yk-lab/yamlfmt-action@main
+        # Dogfood this fork's own action.yml (was `yk-lab/yamlfmt-action@main`).
+        uses: ./
         with:
           path: .
